@@ -27,8 +27,8 @@
 }
 
 .form-head {
-    font: normal normal normal 24px/37px Roboto;
-    letter-spacing: 0px;
+    font: normal normal 20px/30px Roboto;
+    letter-spacing: px;
     color: #42515f;
     text-align: left;
     text-transform: capitalize;
@@ -66,7 +66,7 @@
     text-align: left;
 }
 .image-form{
-    width: 40%;
+    width: 20%;
     padding-left: 5px;
     padding-right: 20px;
 }
@@ -76,7 +76,7 @@
   .btn{
     display: flex;
     justify-content: space-between;
-    margin-top: 35px;
+    margin-top: 0px;
     a{
         color: #1a73e8;
         font-size: 16px;

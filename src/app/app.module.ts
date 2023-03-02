@@ -13,7 +13,7 @@ import { ComponentsComponent } from './components/components.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
