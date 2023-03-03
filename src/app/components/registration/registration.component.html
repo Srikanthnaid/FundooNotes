@@ -1,6 +1,6 @@
 <div class="main-form">
   <div class="form-content">
-    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <div class="left-form">
         <div class="form-head1">
           <span class="a" style="color: rgb(66, 133, 244)">F</span>
@@ -15,14 +15,14 @@
           <p>
             <mat-form-field class="name-form" appearance="outline">
               <mat-label>First Name</mat-label>
-              <input matInput placeholder="First Name" formControlName="firstname">
+              <input matInput placeholder="First Name" formControlName="firstName">
               <mat-error >Enter First Name</mat-error>
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Last Name</mat-label>
-              <input matInput placeholder="Last Name" formControlName="lastname">
+              <input matInput placeholder="Last Name" formControlName="lastName">
               <mat-error>Enter Last Name</mat-error>
             </mat-form-field>
           </p>
@@ -65,7 +65,7 @@
 
         <div class="btn">
           <a mat-button routerLink="/login" routerLinkActive="activ">Sign in instead</a>
-          <button mat-raised-button>Next</button>
+          <button mat-raised-button >Next</button>
         </div>
 
       </div>

@@ -5,10 +5,10 @@ import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 const routes: Routes = [
-  {path:'',component:RegistrationComponent},
-  {path:'register',component:RegistrationComponent},
-  {path: 'login',component:LoginComponent},
-  {path: 'forgotpwd',component:ForgotPasswordComponent}
+  { path: '', component: RegistrationComponent },
+  { path: 'register', component: RegistrationComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'forgotpwd', component: ForgotPasswordComponent }
 ];
 
 @NgModule({
