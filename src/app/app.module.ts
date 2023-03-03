@@ -15,6 +15,18 @@ import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MatIconModule } from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { DisplayComponent } from './components/display/display.component';
+import { CreateComponent } from './components/create/create.component';
+import { IconComponent } from './components/icon/icon.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 
 @NgModule({
@@ -23,7 +35,14 @@ import { HttpClientModule } from '@angular/common/http';
     ComponentsComponent,
     RegistrationComponent,
     LoginComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    DashboardComponent,
+    GetAllNotesComponent,
+    DisplayComponent,
+    CreateComponent,
+    IconComponent,
+    ArchiveComponent,
+    TrashComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +52,12 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatCheckboxModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatMenuModule
 
   ],
   providers: [],
