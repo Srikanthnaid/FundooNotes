@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -24,13 +23,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 import { DisplayNoteComponent } from './components/display/display.component';
 import { CreateComponent } from './components/create-note/create.component';
-import { IconComponent } from './components/icon/icon.component';
+
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import {MatCardModule} from '@angular/material/card';
-import { UpdateNoteComponent } from './components/update-note/update-note.component';
+import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { IconComponent } from './components/icon/icon.component';
+import { UpdateNoteComponent } from './components/update-note/update-note.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -43,10 +46,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     GetAllNotesComponent,
     DisplayNoteComponent,
     CreateComponent,
-    IconComponent,
     ArchiveComponent,
     TrashComponent,
-    UpdateNoteComponent
+    IconComponent,
+    UpdateNoteComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -65,7 +69,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSnackBarModule,
     FormsModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
