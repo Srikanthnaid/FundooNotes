@@ -16,7 +16,7 @@
             <mat-form-field class="name-form" appearance="outline">
               <mat-label>First Name</mat-label>
               <input matInput placeholder="First Name" formControlName="firstName">
-              <mat-error >Enter First Name</mat-error>
+              <mat-error>Enter First Name</mat-error>
             </mat-form-field>
           </p>
           <p>
@@ -65,7 +65,10 @@
 
         <div class="btn">
           <a mat-button routerLink="/login" routerLinkActive="activ">Sign in instead</a>
-          <button mat-raised-button >Next</button>
+
+
+          <button mat-button (click)="openSnackBar('message.value')">Next</button>
+
         </div>
 
       </div>

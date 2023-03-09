@@ -1,1 +1,11 @@
-<p>icon works!</p>
+
+<input type="text" [(ngModel)]="input">
+<input type="text"[(ngModel)]="out">
+<button (click)="show()">Submit</button>
+
+
+<input type="text" placeholder="Enter data" (keyup)="OnKeyUp($event)">
+
+<input type="text" placeholder="Enter key" (keypress)="OnKeyPress($event)">
+
+ 

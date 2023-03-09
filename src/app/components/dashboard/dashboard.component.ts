@@ -12,7 +12,7 @@ export class DashboardComponent implements OnDestroy {
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
 
-  fillerContent = Array.from(
+  filterContent = Array.from(
     {length: 50},
     () =>
       ``,

@@ -1,18 +1,24 @@
-import { createComponent, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { CreateComponent } from './components/create/create.component';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+
+
+
 
 const routes: Routes = [
-  { path: '', component: RegistrationComponent },
+  { path: '', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgotpwd', component: ForgotPasswordComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'create-note', component: CreateComponent }
+  { path: 'dashboard', component: DashboardComponent ,
+  children: [
+    { path: '', redirectTo: "/dashboard/notes", pathMatch: 'full' },
+    {path:'notes',component:GetAllNotesComponent}
+  ]}
 ];
 
 @NgModule({

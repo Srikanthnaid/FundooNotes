@@ -8,10 +8,7 @@
     box-shadow: 1px 1px 1px 1px;
     gap: 10px;
 }
-
-
-.notesbar{
-
+.notesbar {
     border: none;
     outline: none;
     border: 0px solid rgb(97, 10, 10);
@@ -22,7 +19,7 @@
     position: relative;
     min-width: 380px;
 }
-notesbutton{
+.notesbutton{
     display: flex;
     gap: 30px;
     border: none;
@@ -95,4 +92,5 @@ notesbutton{
 }
 .notesclose{
     font-size: 17px;
+    color: rgb(118, 118, 118);
 }

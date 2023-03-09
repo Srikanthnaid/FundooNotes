@@ -13,21 +13,22 @@ import { ComponentsComponent } from './components/components.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MatIconModule } from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
-import { DisplayComponent } from './components/display/display.component';
-import { CreateComponent } from './components/create/create.component';
+import { DisplayNoteComponent } from './components/display/display.component';
+import { CreateComponent } from './components/create-note/create.component';
 import { IconComponent } from './components/icon/icon.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
-
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { TrashComponent } from './components/trash/trash.component';
     ForgotPasswordComponent,
     DashboardComponent,
     GetAllNotesComponent,
-    DisplayComponent,
+    DisplayNoteComponent,
     CreateComponent,
     IconComponent,
     ArchiveComponent,
@@ -57,7 +58,10 @@ import { TrashComponent } from './components/trash/trash.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSnackBarModule,
+    FormsModule,
+    MatCardModule
 
   ],
   providers: [],
