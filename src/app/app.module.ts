@@ -29,6 +29,8 @@ import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
+import { UpdateNoteComponent } from './components/update-note/update-note.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import {MatCardModule} from '@angular/material/card';
     CreateComponent,
     IconComponent,
     ArchiveComponent,
-    TrashComponent
+    TrashComponent,
+    UpdateNoteComponent
   ],
   imports: [
     BrowserModule,
@@ -61,8 +64,8 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatSnackBarModule,
     FormsModule,
-    MatCardModule
-
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,4 +23,7 @@ export class GetAllNotesComponent implements OnInit{
       
     })
   }
+  updatedData($event:any){
+    this.onSubmit();
+  }
 }
