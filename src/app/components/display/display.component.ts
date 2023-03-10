@@ -8,7 +8,8 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
   styleUrls: ['./display.component.scss']
 })
 export class DisplayNoteComponent implements OnInit {
-  @Input() notesList:any;
+  @Input() 
+  notesList:any;
 
   constructor(private dialog: MatDialog) { }
 

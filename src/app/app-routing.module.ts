@@ -5,6 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 
 
@@ -14,11 +15,14 @@ const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgotpwd', component: ForgotPasswordComponent },
-  { path: 'dashboard', component: DashboardComponent ,
-  children: [
-    { path: '', redirectTo: "/dashboard/notes", pathMatch: 'full' },
-    {path:'notes',component:GetAllNotesComponent}
-  ]}
+  {
+    path: 'dashboard', component: DashboardComponent,
+    children: [
+      { path: '', redirectTo: "/dashboard/notes", pathMatch: 'full' },
+      { path: 'notes', component: GetAllNotesComponent },
+      { path: 'trash', component: TrashComponent }
+    ]
+  }
 ];
 
 @NgModule({

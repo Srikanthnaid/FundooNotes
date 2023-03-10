@@ -1,2 +1,2 @@
 <app-create></app-create>
-<app-display [notesList]="notesList"></app-display>
+<app-display [notesList]="notesList" (notesUpdated)="updatedData($event)"></app-display>

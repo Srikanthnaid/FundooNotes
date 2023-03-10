@@ -14,13 +14,13 @@ export class NoteService {
   }
   //create note and it required data like- title,description
   createnotes(reqData: any) {
-    console.log(reqData,this.token);
+    console.log(reqData, this.token);
 
     //we pass the data and get the data in the form of appilcation/json
     let header = {
       headers: new HttpHeaders({
         'content-type': 'application/json',
-        'Authorization': 'Bearer '+this.token
+        'Authorization': 'Bearer ' + this.token
       })
     }
     //call to the post httpService method
@@ -34,20 +34,33 @@ export class NoteService {
     let header = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-        'Authorization': `Bearer ${this.token}` 
+        'Authorization': `Bearer ${this.token}`
       })
     }
-    return this.httpService.getService('/notes/allNote',true,header)
+    return this.httpService.getService('/notes/allNote', true, header)
   }
   //updatenote
-  updatenote(noteId:number,reqData:any){
+  updatenote(noteId: string, reqData: any) {
     let header = {
-      headers:new HttpHeaders({
-        'Content-type':'application/json',
-        'Authorization': `Bearer ${this.token}` 
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': `Bearer ${this.token}`
       })
+    }
+    return this.httpService.putService('/notes/'+noteId ,  reqData, true, header)
   }
-  return this.httpService.putService('/notes/Update',reqData,true,header)
-}
+  /**
+   * trash note
+   */
+  trashnotes(reqData: any) {
+
+    let header = {
+      Headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': `Bearer ${this.token}`
+      })
+    }
+    return this.httpService.putService('/notes/_id/Trash', reqData, true, header)
+  }
 
 }
