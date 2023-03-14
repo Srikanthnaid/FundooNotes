@@ -35,7 +35,7 @@ export class UpdateNoteComponent implements OnInit {
       console.log("Update successfully ",response);
       this.dialogRef.close();
       this.update===true;
-      if(this.update===true){
+      if(this.update!==null){
         this.snackBar.open(`Note update succ!!`,'',{
           duration:2000,
           verticalPosition:'bottom'

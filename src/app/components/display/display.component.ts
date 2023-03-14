@@ -8,8 +8,7 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
   styleUrls: ['./display.component.scss']
 })
 export class DisplayNoteComponent implements OnInit {
-  @Input() 
-  notesList:any;
+  @Input() notesList:any;
 
   constructor(private dialog: MatDialog) { }
 
@@ -18,9 +17,9 @@ export class DisplayNoteComponent implements OnInit {
   }
   openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdateNoteComponent,  {
-     width: '45%px',
+     width: '45PX%',
      height: 'auto',
-     panelClass: 'updateDialog',
+     //panelClass: 'updateDialog',
      data:note
      });
      dialogRef.afterClosed().subscribe(result => {

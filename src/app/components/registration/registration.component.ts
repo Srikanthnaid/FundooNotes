@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+
 import { UserService } from 'src/app/Services/userService/user.service';
 
 
@@ -64,3 +65,5 @@ export class RegistrationComponent implements OnInit {
     
   }
 }
+
+

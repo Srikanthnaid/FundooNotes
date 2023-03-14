@@ -38,7 +38,7 @@ export class CreateComponent implements OnInit {
       console.log(`new note created`);
       this.snackBar.open('new note create succ!!!', '', {
         duration: 2000,
-        verticalPosition: 'top'
+        verticalPosition: 'bottom'
       })
       let reqData = {
         title: this.createForm.value.title,
@@ -53,7 +53,10 @@ export class CreateComponent implements OnInit {
     } else {
       this.submitted = false;
       console.log(`values are null please enter a values`);
-
+      this.snackBar.open('new note create succ!!!', '', {
+        duration: 2000,
+        verticalPosition: 'top'
+      })
     }
     this.display = true;
   }

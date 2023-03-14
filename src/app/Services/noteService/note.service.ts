@@ -47,20 +47,31 @@ export class NoteService {
         'Authorization': `Bearer ${this.token}`
       })
     }
-    return this.httpService.putService('/notes/'+noteId ,  reqData, true, header)
+    return this.httpService.putService('/notes/' + noteId, reqData, true, header)
   }
   /**
    * trash note
    */
   trashnotes(reqData: any) {
+    console.log(reqData, this.token);
 
     let header = {
-      Headers: new HttpHeaders({
+      headers: new HttpHeaders({
         'Content-type': 'application/json',
         'Authorization': `Bearer ${this.token}`
       })
     }
-    return this.httpService.putService('/notes/_id/Trash', reqData, true, header)
+    return this.httpService.putService('/notes/' + reqData.noteId + '/Trash', {}, true, header)
   }
 
+  archivenotes(reqData: any) {
+    console.log(reqData, this.token);
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': `Bearer ${this.token}`
+      })
+    }
+    return this.httpService.putService('/notes/' + reqData.noteId + '/Archive', {}, true, header)
+  }
 }
